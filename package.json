@@ -1,0 +1,29 @@
+{
+  "name": "es6-xperimation",
+  "version": "1.0.0",
+  "description": "This is experimentation with the features of ES6",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 9000",
+    "babel": "babel --perset es2015 src/js/main.js -o build/js/main.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomad-mystic/ES6Experimentation.git"
+  },
+  "author": "Keith Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomad-mystic/ES6Experimentation/issues"
+  },
+  "homepage": "https://github.com/nomad-mystic/ES6Experimentation#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1"
+  }
+}
