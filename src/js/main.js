@@ -4,9 +4,13 @@
 
 
 
+$(function() {
+    console.log('jQuery working right');
+});
+
 import * as testingImport from './testExportModule';
 import * as promises from './promises';
-
+import {buildMagicDOM} from './templates';
 
 let {testingObjectCreation} = testingImport.testingFunction();
 
@@ -14,7 +18,7 @@ let {testingObjectCreation} = testingImport.testingFunction();
 let numberArray = testingImport.buildArray(4);
 
 let testingAJAX = promises.getURLPromise('/data/magicData.json').then(function(response) {
-    console.log("Success!", response);
+    buildMagicDOM(response)
 }, function(error) {
     console.error("Failed!", error);
 });

@@ -61,11 +61,17 @@
 	
 	var promises = _interopRequireWildcard(_promises);
 	
+	var _templates = __webpack_require__(8);
+	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	/**
 	 * Created by Nomad_Mystic on 7/7/2016.
 	 */
+	
+	$(function () {
+	    console.log('jQuery working right');
+	});
 	
 	var _testingImport$testin = testingImport.testingFunction();
 	
@@ -76,7 +82,7 @@
 	var numberArray = testingImport.buildArray(4);
 	
 	var testingAJAX = promises.getURLPromise('/data/magicData.json').then(function (response) {
-	    console.log("Success!", response);
+	    (0, _templates.buildMagicDOM)(response);
 	}, function (error) {
 	    console.error("Failed!", error);
 	});
@@ -1936,6 +1942,29 @@
 	        // Make the request
 	        req.send();
 	    });
+	};
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Created by endof on 7/9/2016.
+	 */
+	
+	var buildMagicDOM = exports.buildMagicDOM = function buildMagicDOM(response) {
+	    var parseResponse = JSON.parse(response);
+	    console.log("Success!", parseResponse);
+	
+	    parseResponse.children.forEach(function (magicSet) {
+	        console.log(magicSet);
+	    });
+	    var magicTable = document.getElementById('magicTable');
 	};
 
 /***/ }
