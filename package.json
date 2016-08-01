@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -p 9000",
     "babel": "babel --preset es2015 src/js/main.js -o build/js/main.bundle.js",
-    "test": "mocha test/arrayTest.js -w --compilers js:babel-register",
+    "test": "mocha -w --compilers js:babel-register",
     "webpack": "webpack -w"
   },
   "repository": {
@@ -31,10 +31,11 @@
     "browser-sync": "^2.13.0",
     "browser-sync-webpack-plugin": "^1.1.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
     "http-server": "^0.9.0",
-    "jquery": "^3.1.0",
+    "jQuery": "^1.7.4",
     "jsdom": "^9.4.1",
     "mocha": "^2.5.3",
     "moment": "^2.14.1",
@@ -42,9 +43,11 @@
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "rx": "^4.1.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "extract-text-webpack-plugin": "^1.0.1"
   }
 }

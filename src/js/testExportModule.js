@@ -37,11 +37,11 @@ export let testingFunction = () => {
 
 export let buildArray = (number) => {
 
-    var numberArray = [];
-    var counter = '';
-    for (var i=0; i < number; i++) {
-        counter += number;
-        numberArray.push(counter);
-    }
-    return numberArray;
+    // var numberArray = [];
+    // var counter = '';
+    // for (var i=0; i < number; i++) {
+    //     counter += number;
+    //     numberArray.push(counter);
+    // }
+    // return numberArray;
 };
