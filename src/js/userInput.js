@@ -24,7 +24,7 @@ export let buildMagicBlockTableClickEvents = () => {
             console.log(evnt.target.innerText);
             let inputValue = evnt.target.innerText;
             promises.getURLPromise('/data/magicData.json').then(function(response) {
-                
+
                 buildUserMagicBlock(response, inputValue);
             }, function(error) {
                 console.error("Failed!", error);

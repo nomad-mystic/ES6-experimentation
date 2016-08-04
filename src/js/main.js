@@ -2,12 +2,36 @@
  * Created by Nomad_Mystic on 7/7/2016.
  */
 
+
+import * as promises from './promises';
+// include jQuery and Bootstrap
+// require('jQuery');
+require('bootstrap');
 // get styles into the project from webpack
 require('../styles/styles.css');
 
+// get the magic the gathering SDK
+
+// getting API call from node server
+// import {setsCards} from './api/setsCards';
+// let setsCards = require('./api/setsCards');
+// console.log(setsCards);
+
+
+let testingFrontEnd = promises.getURLPromise('/src/js/api/setsCards.js').then(function(response) {
+    // calls template fr population of the table on load
+    // buildMagicBlockTable(response);
+    console.log(response);
+    // build out the click events for each of the block on init
+
+}, function(error) {
+    console.error("Failed!", error);
+});
+
+
 import {userInputBlockOnSubmit, buildMagicBlockTableClickEvents} from './userInput';
 // import * as testingImport from './testExportModule';
-import * as promises from './promises';
+
 import {buildMagicBlockTable, buildUserMagicBlock} from './templates';
 
 // let {testingObjectCreation} = testingImport.testingFunction();
